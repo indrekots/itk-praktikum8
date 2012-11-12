@@ -1,4 +1,4 @@
-package ee.itcollege.i377.praktikum6;
+package ee.itcollege.i377.praktikum8;
 
 import java.util.Date;
 
