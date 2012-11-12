@@ -1,7 +1,12 @@
 package ee.itcollege.i377.praktikum8;
 
+import java.util.Date;
+
 import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 public class Guard {
 	
@@ -13,6 +18,12 @@ public class Guard {
 	
 	@Size(min=11, max=11)
 	private String identificationCode;
+	
+	@Pattern(regexp="^\\+?\\d+")
+	private String phoneNumber;
+	
+	@DateTimeFormat(pattern="dd.MM.yyyy")
+	private Date startDate;
 	
 	public String getName() {
 		return name;
@@ -31,6 +42,18 @@ public class Guard {
 	}
 	public void setIdentificationCode(String identificationCode) {
 		this.identificationCode = identificationCode;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public Date getStartDate() {
+		return startDate;
+	}
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
 	}
 
 }

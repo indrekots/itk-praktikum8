@@ -19,6 +19,14 @@
 		<form:input path="identificationCode" />
 		<form:errors path="identificationCode" />
 		<br />
+		<label>Telefoni number</label>
+		<form:input path="phoneNumber" />
+		<form:errors path="phoneNumber" />
+		<br />
+		<label>Tööleasumise kuupäev</label>
+		<form:input path="startDate" />
+		<form:errors path="startDate" />
+		<br />
 		<input type="submit" value="Lisa" />
 	</form:form>
 
